@@ -215,7 +215,7 @@ class EIMBlocks {
   // when receive
   whenMessageReceive(args) {
     const targetMessage = args.DATA;
-    if (targetMessage === this.message || targetMessage === "*" && !!this.message != null) {
+    if (targetMessage === this.message || targetMessage === "*" && this.message != null) {
       // console.log(`targetMessage: ${this.message}`);
       this.message = null; // 每次清空
       return true;
